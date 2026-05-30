@@ -32,9 +32,9 @@
 
 
 ## Demo 展示
-![铸造页面（首页）](./docs/1.png)(./docs/2.png)(./docs/3.png)
-![合约实现（LuLuCoin.sol）](./docs/2.png)
-![合约交互核心（erc20mint.js）](./docs-assets/web3-mint-code.png)
+![铸造页面（首页）](./docs/1.png)
+![钱包交互](./docs/2.png)
+![代币铸造](./docs/3.png)
 
 ## 感谢
 -  `claude` `deepseek` `claude code` `lllu_23`
