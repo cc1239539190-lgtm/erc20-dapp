@@ -21,16 +21,6 @@
 6. 前端等待回执并重新读取 `balanceOf` / `totalSupply`。
 7. 页面回显新余额，完成“用户动作 -> 链上变化 -> 前端回显”闭环。
 
-## 合约接口与状态
-| 接口/事件 | 调用方 | 输入 | 状态变化 | 失败条件 | 前端触发入口 |
-| --- | --- | --- | --- | --- | --- |
-| `mint(uint256)` | Owner | `amount` | 增加 `totalSupply` 与 Owner 余额 | 非 Owner 调用 | `components/erc20mint.js` |
-| `burn(uint256)` | Owner | `amount` | 减少 `totalSupply` 与 Owner 余额 | 非 Owner / 余额不足 | 脚本或控制台 |
-| `balanceOf(address)` | 任意读 | `account` | 无 | 无 | 页面读链逻辑 |
-| `Mint(uint256)` | 合约发出 | `amount` | 事件日志 | 无 | 交易后可用于索引 |
-| `Burn(uint256)` | 合约发出 | `amount` | 事件日志 | 无 | 交易后可用于索引 |
-
-
 ## Demo 展示
 ![铸造页面（首页）](./docs/1.png)
 ![钱包交互](./docs/2.png)
